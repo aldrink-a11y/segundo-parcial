@@ -1,21 +1,29 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Title } from '@angular/platform-browser';
+import { Title } from '@angular/platform-browser'; // <-- 1. Importar Title
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.component.html', // <-- Esta ruta debe coincidir con tu archivo
-  styleUrls: ['./app.component.css'] // o .scss
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  // ... el código del constructor con Title va aquí ...
 
+  public constructor(private titleService: Title) {
+  
+  }
+
+  
   solicitarPermiso(): void {
     Notification.requestPermission().then(permission => {
       if (permission === 'granted') {
         console.log('Permiso para notificaciones concedido.');
+        alert('¡Gracias por darnos permiso para notificar!');
+      } else {
+        console.log('Permiso para notificaciones denegado.');
+        alert('No nos diste permiso. No te preocupes, no te molestaremos.');
       }
     });
   }
@@ -27,7 +35,7 @@ export class AppComponent {
         icon: 'assets/icons/icon-192x192.png'
       });
     } else {
-      alert('Primero debes permitir las notificaciones.');
+      alert('Primero debes hacer clic en "Permitir notificaciones".');
     }
   }
 }
