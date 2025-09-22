@@ -10,9 +10,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./app.component.css'] // o .scss
 })
 export class AppComponent {
-  public constructor(private titleService: Title) {
-    this.titleService.setTitle('Segundo Parcial - Home');
-  }
+  // ... el código del constructor con Title va aquí ...
 
   solicitarPermiso(): void {
     Notification.requestPermission().then(permission => {
