@@ -60,3 +60,8 @@ For more information on using the Angular CLI, including detailed command refere
 
 ## Framework CSS
 El framework elegido para este proyecto es **Bootstrap 5**.
+
+## Template UI
+El diseño de la interfaz se basa en el template [freelancer].
+* **Fuente:** [https://startbootstrap.com/theme/freelancer]
+* **Licencia:** [https://github.com/startbootstrap/startbootstrap-freelancer/blob/master/LICENSE]
