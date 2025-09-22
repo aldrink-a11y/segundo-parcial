@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
-import { UiDemo } from './pages/ui-demo/ui-demo.spec';
+
+import { UiDemoComponent } from './pages/ui-demo/ui-demo.component';
 
 export const routes: Routes = [
-  { path: 'ui', component: UiDemo }
+  { path: 'ui', component: UiDemoComponent }
 ];
